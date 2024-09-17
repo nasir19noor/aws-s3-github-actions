@@ -10,12 +10,12 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1  # Replace with your AWS region
+        aws-region: asia-southeast-1  # Replace with your AWS region
 
     - name: Remove existing content from S3 bucket
       run: |
-        aws s3 rm s3://nasir-landing-page/ --recursive
+        aws s3 rm s3://github.nasir.id/ --recursive
 
     - name: Sync new content to S3 bucket
       run: |
-        aws s3 cp --recursive . s3://nasir-landing-page/
+        aws s3 cp --recursive . s3://github.nasir.id/
