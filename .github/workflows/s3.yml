@@ -19,7 +19,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: asia-southeast-1  # Replace with your AWS region
+        aws-region: ap-southeast-1  # Replace with your AWS region
 
     - name: Remove existing content from S3 bucket
       run: |
